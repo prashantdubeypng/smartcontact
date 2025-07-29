@@ -94,3 +94,11 @@ def login(request):
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
     return JsonResponse({'error': 'Invalid request method'}, status=405)
+# def save_contact(request):
+#     try:
+#         data = json.loads(request.body)
+#         name = data.get('name')
+#         phone_no = data.get('m_no')
+#         relation = data.get('relation')
+#         is_public = data.get('is_public')
+#         action = data.get('action')
